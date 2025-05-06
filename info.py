@@ -17,7 +17,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
-PICS = (environ.get('PICS', 'https://envs.sh/EV5.jpg https://envs.sh/EVL.jpg https://envs.sh/niL.jpg https://envs.sh/ni5.jpg https://envs.sh/niG.jpg https://envs.sh/niK.jpg https://envs.sh/niY.jpg')).split()
+PICS = (environ.get('PICS', 'https://envs.sh/EV5.jpg https://i.ibb.co/ch3n9wsf/x.jpg https://graph.org/file/876867e761c6c7a29855b.jpg')).split()
 
 
 # Admins & Users
@@ -26,10 +26,10 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002241963214'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002405776043'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002358005055').split()]  # For Multiple Id Use One Space Between Each.
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001769437975 -1001855645227 -1002411436292').split()]  # For Multiple Id Use One Space Between Each.
 
 # auth_channel means force subscribe channel.
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
@@ -41,7 +41,7 @@ auth_channel = environ.get('AUTH_CHANNEL', '-1002442422204') # give your force s
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # This Channel Is For When User Request Any File Name With command or hashtag like - /request or #request
-reqst_channel = environ.get('REQST_CHANNEL', '0')
+reqst_channel = environ.get('REQST_CHANNEL', '-1002258541880')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 
 # This Channel Is For Index Request 
@@ -52,23 +52,23 @@ support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002401879443')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 
 # This Channel Is For /batch command file store.
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '0')).split()]  # For Multiple Id Use One Space Between Each.
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002223668108')).split()]  # For Multiple Id Use One Space Between Each.
 
 # This Channel Is For Delete Index File, Forward Your File In This Channel Which You Want To Delete Then Bot Automatically Delete That File From Database.
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]  # For Multiple Id Use One Space Between Each.
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002463332367').split()]  # For Multiple Id Use One Space Between Each.
 
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Demo:ak@cluster0.c2ozf7b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")   # IF Multiple Database Is False Then Fill Only This Database Url.
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://first:ak@cluster0.oghxxl3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")   # IF Multiple Database Is False Then Fill Only This Database Url.
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'techvjcollection')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'akmovies')
 
 MULTIPLE_DATABASE = bool(environ.get('MULTIPLE_DATABASE', True)) # Set True or False
 
 # If Multiple Database Is True Then Fill All Three Below Database Uri Else You Will Get Error.
-O_DB_URI = environ.get('O_DB_URI', "mongodb+srv://ak:ak@cluster0.coguvzb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")   # This Db Is For Other Data Store
-F_DB_URI = environ.get('F_DB_URI', "mongodb+srv://desi:desi@cluster0.ylhef.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For File Data Store
-S_DB_URI = environ.get('S_DB_URI', "mongodb+srv://ak:ak@cluster0.c2ozf7b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")   # This Db is for File Data Store When First Db Is Going To Be Full.
+O_DB_URI = environ.get('O_DB_URI', "mongodb+srv://akm:akm@cluster0.wf6fy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")   # This Db Is For Other Data Store
+F_DB_URI = environ.get('F_DB_URI', "mongodb+srv://ak:ak@cluster0.9zbdv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For File Data Store
+S_DB_URI = environ.get('S_DB_URI', "mongodb+srv://db:db@cluster0.oghxxl3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")   # This Db is for File Data Store When First Db Is Going To Be Full.
 
 
 # Premium And Referal Settings
@@ -78,23 +78,23 @@ PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) #
 REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '20')) # number of referal count
 REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1month') # time in week, day, month.
 PAYMENT_QR = environ.get('PAYMENT_QR', 'https://envs.sh/lR4.jpg') # payment code picture url.
-PAYMENT_TEXT = environ.get('PAYMENT_TEXT', '<b>- ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs - \n\n- 𝟷𝟻ʀs - 1 ᴡᴇᴇᴋ\n- 50ʀs - 1 ᴍᴏɴᴛʜs\n- 120ʀs - 3 ᴍᴏɴᴛʜs\n- 220ʀs - 6 ᴍᴏɴᴛʜs\n\n🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs 🎁\n\n○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ\n○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ\n○ ᴅɪʀᴇᴄᴛ ғɪʟᴇs\n○ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ\n○ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ\n○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs\n○ ᴜɴʟɪᴍɪᴛᴇᴅ Aᴅᴜʟᴛ Vɪᴅᴇᴏs\n○ ꜰᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ\n○ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ 1ʜ ɪꜰ ᴀᴠᴀɪʟᴀʙʟᴇ\n\n✨ ᴜᴘɪ ɪᴅ - <code>demo@okxyz</code>\n\nᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ /myplan\n\n💢 ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ\n\n‼️ ᴀғᴛᴇʀ sᴇɴᴅɪɴɢ ᴀ sᴄʀᴇᴇɴsʜᴏᴛ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴜs sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ</b>')
+PAYMENT_TEXT = environ.get('PAYMENT_TEXT', '<b>- ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs - \n\n- 𝟷𝟻ʀs - 1 ᴡᴇᴇᴋ\n- 60ʀs - 1 ᴍᴏɴᴛʜs\n- 120ʀs - 3 ᴍᴏɴᴛʜs\n- 220ʀs - 6 ᴍᴏɴᴛʜs\n\n🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇs 🎁\n\n○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ\n○ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ\n○ ᴅɪʀᴇᴄᴛ ғɪʟᴇs\n○ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ\n○ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ\n○ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs\n○ ᴜɴʟɪᴍɪᴛᴇᴅ Aᴅᴜʟᴛ Vɪᴅᴇᴏs\n○ ꜰᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ\n○ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ 1ʜ ɪꜰ ᴀᴠᴀɪʟᴀʙʟᴇ\n\n✨ ᴜᴘɪ ɪᴅ - <code>demo@okxyz</code>\n\nᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ /myplan\n\n💢 ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ\n\n‼️ ᴀғᴛᴇʀ sᴇɴᴅɪɴɢ ᴀ sᴄʀᴇᴇɴsʜᴏᴛ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴜs sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ</b>')
 
 
 # Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
 CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
-CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://aaa:bbb@cluster0.c2ozf7b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # Necessary If clone mode is true
+CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://public:demo@cluster0.oghxxl3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # Necessary If clone mode is true
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', 'abcdefghijklmnopqrstuvwxyz098123') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
 
 # Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+XkULu0nROB80MmY9')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/movie_seriesgroup')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/AkMoviesHubBackup')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '+U9ABfC7hu1EyZjU1') # Support Chat Link Without https:// or @
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/the_songoku')
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/ak_ownerbot')
 
 # True Or False
-AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', False))
+AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
 PM_SEARCH = bool(environ.get('PM_SEARCH', True))
 BUTTON_MODE = bool(environ.get('BUTTON_MODE', True))
 MAX_BTN = bool(environ.get('MAX_BTN', True))
@@ -106,7 +106,7 @@ LONG_IMDB_DESCRIPTION = bool(environ.get("LONG_IMDB_DESCRIPTION", False))
 SPELL_CHECK_REPLY = bool(environ.get("SPELL_CHECK_REPLY", True))
 MELCOW_NEW_USERS = bool(environ.get('MELCOW_NEW_USERS', True))
 PROTECT_CONTENT = bool(environ.get('PROTECT_CONTENT', False))
-PUBLIC_FILE_STORE = bool(environ.get('PUBLIC_FILE_STORE', False))
+PUBLIC_FILE_STORE = bool(environ.get('PUBLIC_FILE_STORE', True))
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
@@ -118,7 +118,7 @@ VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '95c90443f0324be09797
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/how_to_open_link_ak/10')
 
 # If You Fill Second Shortner Then Bot Attach Both First And Second Shortner And Use It For Verify.
-VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', True))
+VERIFY_SECOND_SHORTNER = bool(environ.get('VERIFY_SECOND_SHORTNER', False))
 # if verify second shortner is True then fill below url and api
 VERIFY_SND_SHORTLINK_URL = environ.get('VERIFY_SND_SHORTLINK_URL', 'shortxlinks.com')
 VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '95c90443f0324be097970c3f704e16eca7116c81')
